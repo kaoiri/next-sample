@@ -1,65 +1,82 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styled from 'styled-components'
+import Sitelogo from '../components/common/Sitelogo'
+import Nav from '../components/navigation/Nav'
+import Wrap from '../components/common/Wrap'
+import Card from '../components/card/Card'
+import Columns from '../components/list/Columns'
+import Column from '../components/list/Column'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Wrap>
+        <MyHeader>
+          <Sitelogo image="/vercel.svg"></Sitelogo>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+          <Nav></Nav>
+        </MyHeader>
+      </Wrap>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+      <Main>
+        <Wrap>
+          <Columns>
+            <Column items="3">
+              <Card
+                name="サンプル1"
+                message="最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。"
+              ></Card>
+            </Column>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+            <Column items="3">
+              <Card
+                name="サンプル2"
+                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
+              ></Card>
+            </Column>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            <Column items="3">
+              <Card
+                name="サンプル2"
+                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
+              ></Card>
+            </Column>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            <Column items="3">
+              <Card
+                name="サンプル2"
+                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
+              ></Card>
+            </Column>
+          </Columns>
+        </Wrap>
+      </Main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <MyFooter>
+        フッター
+      </MyFooter>
     </div>
   )
 }
+
+const MyHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000000;
+`
+
+const Main = styled.main`
+  padding: 60px 0;
+`;
+
+const MyFooter = styled.footer`
+  padding: 3rem 0;
+  background-color: #dfdfdf;
+  text-align: center;
+  font-size: 2rem;
+`

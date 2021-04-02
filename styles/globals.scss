@@ -6,8 +6,32 @@ body {
   font-size: 16px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   html, body {
     font-size: 14px;
+  }
+}
+
+.mypage {
+  &--header {
+    background-color: #000000;
+  }
+
+  .mypage--section {
+    padding: 90px 0;
+  }
+
+  .mypage--section__red {
+    background-color: #ff0000;
+  }
+
+  &--header {
+    padding: 90px 0;
+
+    &__red {
+    }
+  }
+
+  .mypage--footer {
   }
 }
