@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 50080",
     "build": "next build",
     "start": "next start"
   },
@@ -11,5 +11,11 @@
     "next": "10.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0",
+    "ress": "^3.0.0",
+    "sass": "^1.32.8",
+    "styled-components": "^5.2.3"
   }
 }
