@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 50080",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --config .prettierrc.json --write '**/*.{js, jsx, ts, tsx}'"
   },
   "dependencies": {
     "next": "10.1.2",
@@ -14,6 +15,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "prettier": "^2.2.1",
     "ress": "^3.0.0",
     "sass": "^1.32.8",
     "styled-components": "^5.2.3"

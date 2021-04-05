@@ -26,16 +26,15 @@ export default function Nav() {
 
 const Component = styled.nav`
   position: relative;
-`;
+`
 
 const Menu = styled.ul`
   display: flex;
   height: 100%;
   list-style: none;
-`;
+`
 
-const Item = styled.li`
-`;
+const Item = styled.li``
 
 const Link = styled.a`
   display: flex;
@@ -49,6 +48,6 @@ const Link = styled.a`
   &:hover {
     color: #ffffff;
     background-color: #000000;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
   }
-`;
+`

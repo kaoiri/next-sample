@@ -10,7 +10,7 @@ export default function Column({ items, children }) {
 
 const Component = styled.li`
   display: flex;
-  padding: .5rem;
+  padding: 0.5rem;
 
   &.items-3 {
     width: 33.33%;
@@ -29,4 +29,4 @@ const Component = styled.li`
       width: 100%;
     }
   }
-`;
+`

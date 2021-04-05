@@ -7,6 +7,8 @@ import Card from '../components/card/Card'
 import Columns from '../components/list/Columns'
 import Column from '../components/list/Column'
 
+import { features } from '../data/features'
+
 export default function Home() {
   return (
     <div>
@@ -26,40 +28,18 @@ export default function Home() {
       <Main>
         <Wrap>
           <Columns>
-            <Column items="3">
-              <Card
-                name="サンプル1"
-                message="最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。最初のメッセージです。"
-              ></Card>
-            </Column>
-
-            <Column items="3">
-              <Card
-                name="サンプル2"
-                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
-              ></Card>
-            </Column>
-
-            <Column items="3">
-              <Card
-                name="サンプル2"
-                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
-              ></Card>
-            </Column>
-
-            <Column items="3">
-              <Card
-                name="サンプル2"
-                message="次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。次のメッセージです。"
-              ></Card>
-            </Column>
+            {features.map((f) => {
+              return (
+                <Column items="3">
+                  <Card name={f.name} message={f.message}></Card>
+                </Column>
+              )
+            })}
           </Columns>
         </Wrap>
       </Main>
 
-      <MyFooter>
-        フッター
-      </MyFooter>
+      <MyFooter>フッター</MyFooter>
     </div>
   )
 }
@@ -72,7 +52,7 @@ const MyHeader = styled.header`
 
 const Main = styled.main`
   padding: 60px 0;
-`;
+`
 
 const MyFooter = styled.footer`
   padding: 3rem 0;

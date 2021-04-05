@@ -9,10 +9,10 @@ export default function Sitelogo(props) {
 }
 
 const Component = styled.a`
-  margin: .5rem 0;
+  margin: 0.5rem 0;
 
   > img {
     width: auto;
     height: 30px;
   }
-`;
+`
