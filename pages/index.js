@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styled from 'styled-components'
-import Sitelogo from '../components/common/Sitelogo'
-import Nav from '../components/navigation/Nav'
-import Wrap from '../components/common/Wrap'
+import Header from '../components/layout/Header'
+import Wrap from '../components/slot/Wrap'
+import Section from '../components/slot/Section'
 import Card from '../components/card/Card'
 import Columns from '../components/list/Columns'
 import Column from '../components/list/Column'
+import MainVisual from '../components/title/MainVisual'
 
 import { features } from '../data/features'
 
@@ -17,26 +18,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Wrap>
-        <MyHeader>
-          <Sitelogo image="/vercel.svg"></Sitelogo>
-
-          <Nav></Nav>
-        </MyHeader>
-      </Wrap>
+      <HeaderArea>
+        <Wrap>
+          <Header></Header>
+        </Wrap>
+      </HeaderArea>
 
       <Main>
-        <Wrap>
-          <Columns>
-            {features.map((f) => {
-              return (
-                <Column items="3">
-                  <Card name={f.name} message={f.message}></Card>
-                </Column>
-              )
-            })}
-          </Columns>
-        </Wrap>
+        <MainVisual></MainVisual>
+
+        <Section>
+          <Wrap>
+            <Columns>
+              {features.map((f) => {
+                return (
+                  <Column items="3">
+                    <Card name={f.name} message={f.message}></Card>
+                  </Column>
+                );
+              })}
+            </Columns>
+          </Wrap>
+        </Section>
       </Main>
 
       <MyFooter>フッター</MyFooter>
@@ -44,14 +47,16 @@ export default function Home() {
   )
 }
 
-const MyHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
+const HeaderArea = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #ffffff;
   border-bottom: 1px solid #000000;
 `
 
 const Main = styled.main`
-  padding: 60px 0;
 `
 
 const MyFooter = styled.footer`
