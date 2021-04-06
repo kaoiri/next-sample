@@ -27,7 +27,7 @@ export default function Home() {
       <Main>
         <MainVisual></MainVisual>
 
-        <Section>
+        <Section kind="normal">
           <Wrap>
             <Columns>
               {features.map((f) => {
@@ -39,6 +39,10 @@ export default function Home() {
               })}
             </Columns>
           </Wrap>
+        </Section>
+
+        <Section kind="wide">
+          <!-- Some components -->
         </Section>
       </Main>
 
