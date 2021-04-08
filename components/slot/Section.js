@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-export default function Header({ children }) {
+export default function Header({ kind, children }) {
   return (
-    <Component>
+    <Component className={kind}>
       {children}
     </Component>
   );
@@ -10,4 +10,8 @@ export default function Header({ children }) {
 
 const Component = styled.div`
   padding: 90px 0;
+
+  &.top {
+    padding-bottom: 0;
+  }
 `
