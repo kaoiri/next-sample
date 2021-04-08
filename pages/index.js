@@ -7,6 +7,7 @@ import Card from '../components/card/Card'
 import Columns from '../components/list/Columns'
 import Column from '../components/list/Column'
 import MainVisual from '../components/title/MainVisual'
+import Square from '../components/common/Square'
 
 import { features } from '../data/features'
 
@@ -27,7 +28,7 @@ export default function Home() {
       <Main>
         <MainVisual></MainVisual>
 
-        <Section kind="normal">
+        <Section kind="top">
           <Wrap>
             <Columns>
               {features.map((f) => {
@@ -41,8 +42,22 @@ export default function Home() {
           </Wrap>
         </Section>
 
-        <Section kind="wide">
-          <!-- Some components -->
+        <Section kind="normal">
+          <Wrap>
+            <Columns>
+              <Column items="3">
+                <Square heading="見出し" text="文章です。"></Square>
+              </Column>
+
+              <Column items="3">
+                <Square heading="見出し" text="文章です。"></Square>
+              </Column>
+
+              <Column items="3">
+                <Square heading="見出し" text="文章です。"></Square>
+              </Column>
+            </Columns>
+          </Wrap>
         </Section>
       </Main>
 
