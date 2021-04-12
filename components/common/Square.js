@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
-export default function Square({ heading, text }) {
+export default function Square({ order, heading, text }) {
   return (
     <Component>
       <Contents>
-        <h3>{heading}</h3>
-        <p>{text}</p>
+        <Order>{order}</Order>
+        <Heading dangerouslySetInnerHTML={{ __html: heading }}></Heading>
+        <Text>{text}</Text>
       </Contents>
     </Component>
   );
@@ -25,6 +26,13 @@ const Component = styled.div`
   }
 `;
 
+const Order = styled.p`
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+`;
+
 const Contents = styled.div`
   position: absolute;
   z-index: 2;
@@ -35,17 +43,22 @@ const Contents = styled.div`
   justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 1.5rem;
+`;
 
-  h3, p {
-    color: #ffffff;
-    text-align: center;
-  }
+const Heading = styled.h3`
+  margin-top: .5rem;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.5rem;
 
-  h3 {
-    font-size: 1.5rem;
+  strong {
+    font-size: 2rem;
   }
+`;
 
-  p {
-    margin-top: 1rem;
-  }
+const Text = styled.p`
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1rem;
 `;

@@ -11,6 +11,17 @@ import Square from '../components/common/Square'
 
 import { features } from '../data/features'
 
+const items = [{
+  heading: '<strong>結果</strong>への<strong>コミット</strong>',
+  text: '文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。'
+}, {
+  heading: '見出し',
+  text: '文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。'
+}, {
+  heading: '見出し',
+  text: '文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。'
+}];
+
 export default function Home() {
   return (
     <div>
@@ -45,17 +56,13 @@ export default function Home() {
         <Section kind="normal">
           <Wrap>
             <Columns>
-              <Column items="3">
-                <Square heading="見出し" text="文章です。"></Square>
-              </Column>
-
-              <Column items="3">
-                <Square heading="見出し" text="文章です。"></Square>
-              </Column>
-
-              <Column items="3">
-                <Square heading="見出し" text="文章です。"></Square>
-              </Column>
+              {items.map((i, index) => {
+                return (
+                  <Column items="3">
+                    <Square order={index+1} heading={i.heading} text={i.text} />
+                  </Column>
+                );
+              })}
             </Columns>
           </Wrap>
         </Section>
