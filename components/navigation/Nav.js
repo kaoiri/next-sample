@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Nav() {
   return (
@@ -21,20 +21,20 @@ export default function Nav() {
         </Item>
       </Menu>
     </Component>
-  )
+  );
 }
 
 const Component = styled.nav`
   position: relative;
-`
+`;
 
 const Menu = styled.ul`
   display: flex;
   height: 100%;
   list-style: none;
-`
+`;
 
-const Item = styled.li``
+const Item = styled.li``;
 
 const Link = styled.a`
   display: flex;
@@ -50,4 +50,4 @@ const Link = styled.a`
     background-color: #000000;
     transition-duration: 0.3s;
   }
-`
+`;

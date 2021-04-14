@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Header({ kind, image, color, children }) {
   return (
     <Component className={kind} image={image} color={color}>
       {children}
     </Component>
-  )
+  );
 }
 
 const Component = styled.div`
@@ -22,4 +22,4 @@ const Component = styled.div`
   &.top {
     padding-bottom: 0;
   }
-`
+`;
