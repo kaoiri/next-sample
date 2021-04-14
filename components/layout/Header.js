@@ -9,7 +9,7 @@ export default function Header() {
 
       <Nav></Nav>
     </Component>
-  );
+  )
 }
 
 const Component = styled.header`
