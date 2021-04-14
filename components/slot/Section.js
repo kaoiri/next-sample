@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function Header({ kind, image, color, children }) {
+export default function Section({ kind, image, color, children }) {
   return (
     <Component className={kind} image={image} color={color}>
       {children}
