@@ -117,6 +117,7 @@ export default function Home() {
 
 const HeaderArea = styled.div`
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
@@ -124,9 +125,14 @@ const HeaderArea = styled.div`
   border-bottom: 1px solid #000000;
 `;
 
-const Main = styled.main``;
+const Main = styled.main`
+  position: relative;
+  z-index: 1;
+`;
 
 const MyFooter = styled.footer`
+  position: relative;
+  z-index: 1;
   padding: 3rem 0;
   background-color: #dfdfdf;
   text-align: center;
