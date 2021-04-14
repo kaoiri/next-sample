@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Card({ name, message }) {
   return (
@@ -6,7 +6,7 @@ export default function Card({ name, message }) {
       <Name>{name}</Name>
       <Message>{message}</Message>
     </Component>
-  )
+  );
 }
 
 const Component = styled.div`
@@ -14,14 +14,14 @@ const Component = styled.div`
   border: 1px solid #000000;
   border-radius: 5px;
   background-color: #ffffff;
-`
+`;
 
 const Name = styled.h3`
   font-size: 1.5rem;
   text-align: center;
-`
+`;
 
 const Message = styled.p`
   margin-top: 1rem;
   line-height: 1.75;
-`
+`;

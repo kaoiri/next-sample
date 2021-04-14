@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Sitelogo(props) {
   return (
     <Component href="/">
       <img src={props.image} alt="ロゴ" />
     </Component>
-  )
+  );
 }
 
 const Component = styled.a`
@@ -15,4 +15,4 @@ const Component = styled.a`
     width: auto;
     height: 30px;
   }
-`
+`;

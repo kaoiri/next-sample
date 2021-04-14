@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Column({ items, children }) {
   return (
     <Component items={items} className={`items-${items}`}>
       {children}
     </Component>
-  )
+  );
 }
 
 const Component = styled.li`
@@ -29,4 +29,4 @@ const Component = styled.li`
       width: 100%;
     }
   }
-`
+`;

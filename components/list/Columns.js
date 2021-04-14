@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Columns({ children }) {
-  return <Component>{children}</Component>
+  return <Component>{children}</Component>;
 }
 
 const Component = styled.ul`
@@ -9,4 +9,4 @@ const Component = styled.ul`
   flex-wrap: wrap;
   margin: -0.5rem;
   list-style: none;
-`
+`;

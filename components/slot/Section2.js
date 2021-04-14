@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Header({ kind, image, color, children }) {
   const style = {
     backgroundImage: `url(${image})`,
     backgroundColor: color || 'transparent'
-  }
+  };
 
   return (
     <Component className={kind} style={style}>
       {children}
     </Component>
-  )
+  );
 }
 
 const Component = styled.div`
@@ -25,4 +25,4 @@ const Component = styled.div`
   &.top {
     padding-bottom: 0;
   }
-`
+`;

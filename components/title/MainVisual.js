@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function MainVisual() {
   return (
@@ -18,7 +18,7 @@ export default function MainVisual() {
         <span>だからできる、〜〜〜コンサルティング</span>
       </Strength>
     </Component>
-  )
+  );
 }
 
 const Component = styled.div`
@@ -27,7 +27,7 @@ const Component = styled.div`
   justify-content: center;
   height: 100vh;
   background-color: #efefef;
-`
+`;
 
 const Message = styled.p`
   text-align: center;
@@ -37,7 +37,7 @@ const Message = styled.p`
   strong {
     font-size: 3rem;
   }
-`
+`;
 
 const Strength = styled.div`
   margin-top: 5rem;
@@ -47,7 +47,7 @@ const Strength = styled.div`
     margin-top: 1rem;
     text-align: center;
   }
-`
+`;
 
 const Services = styled.ul`
   display: flex;
@@ -64,4 +64,4 @@ const Services = styled.ul`
       margin-left: 1.5rem;
     }
   }
-`
+`;

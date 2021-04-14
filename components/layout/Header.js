@@ -1,6 +1,6 @@
-import styled from 'styled-components'
-import Sitelogo from '../common/Sitelogo'
-import Nav from '../navigation/Nav'
+import styled from 'styled-components';
+import Sitelogo from '../common/Sitelogo';
+import Nav from '../navigation/Nav';
 
 export default function Header() {
   return (
@@ -9,10 +9,10 @@ export default function Header() {
 
       <Nav></Nav>
     </Component>
-  )
+  );
 }
 
 const Component = styled.header`
   display: flex;
   justify-content: space-between;
-`
+`;

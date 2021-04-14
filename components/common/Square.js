@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export default function Square({ order, heading, text }) {
   return (
@@ -9,7 +9,7 @@ export default function Square({ order, heading, text }) {
         <Text>{text}</Text>
       </Contents>
     </Component>
-  )
+  );
 }
 
 const Component = styled.div`
@@ -24,14 +24,14 @@ const Component = styled.div`
     display: block;
     padding-bottom: 100%;
   }
-`
+`;
 
 const Order = styled.p`
   font-size: 2rem;
   color: #ffffff;
   text-align: center;
   font-weight: 700;
-`
+`;
 
 const Contents = styled.div`
   position: absolute;
@@ -44,7 +44,7 @@ const Contents = styled.div`
   width: 100%;
   height: 100%;
   padding: 1.5rem;
-`
+`;
 
 const Heading = styled.h3`
   margin-top: 0.5rem;
@@ -55,10 +55,10 @@ const Heading = styled.h3`
   strong {
     font-size: 2rem;
   }
-`
+`;
 
 const Text = styled.p`
   color: #ffffff;
   text-align: center;
   margin-top: 1rem;
-`
+`;

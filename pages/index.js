@@ -1,16 +1,16 @@
-import Head from 'next/head'
-import styled from 'styled-components'
-import Header from '../components/layout/Header'
-import Wrap from '../components/slot/Wrap'
-import Section from '../components/slot/Section'
-import Section2 from '../components/slot/Section2'
-import Card from '../components/card/Card'
-import Columns from '../components/list/Columns'
-import Column from '../components/list/Column'
-import MainVisual from '../components/title/MainVisual'
-import Square from '../components/common/Square'
+import Head from 'next/head';
+import styled from 'styled-components';
+import Header from '../components/layout/Header';
+import Wrap from '../components/slot/Wrap';
+import Section from '../components/slot/Section';
+import Section2 from '../components/slot/Section2';
+import Card from '../components/card/Card';
+import Columns from '../components/list/Columns';
+import Column from '../components/list/Column';
+import MainVisual from '../components/title/MainVisual';
+import Square from '../components/common/Square';
 
-import { features } from '../data/features'
+import { features } from '../data/features';
 
 const items = [
   {
@@ -25,7 +25,7 @@ const items = [
     heading: '見出し',
     text: '文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。文章です。'
   }
-]
+];
 
 export default function Home() {
   return (
@@ -52,7 +52,7 @@ export default function Home() {
                   <Column items="3">
                     <Card name={f.name} message={f.message}></Card>
                   </Column>
-                )
+                );
               })}
             </Columns>
           </Wrap>
@@ -66,7 +66,7 @@ export default function Home() {
                   <Column items="3">
                     <Square order={index + 1} heading={i.heading} text={i.text} />
                   </Column>
-                )
+                );
               })}
             </Columns>
           </Wrap>
@@ -80,7 +80,7 @@ export default function Home() {
                   <Column items="3">
                     <Card name={f.name} message={f.message}></Card>
                   </Column>
-                )
+                );
               })}
             </Columns>
           </Wrap>
@@ -94,7 +94,7 @@ export default function Home() {
                   <Column items="3">
                     <Square order={index + 1} heading={i.heading} text={i.text} />
                   </Column>
-                )
+                );
               })}
             </Columns>
           </Wrap>
@@ -103,7 +103,7 @@ export default function Home() {
 
       <MyFooter>フッター</MyFooter>
     </div>
-  )
+  );
 }
 
 const HeaderArea = styled.div`
@@ -113,13 +113,13 @@ const HeaderArea = styled.div`
   width: 100vw;
   background-color: #ffffff;
   border-bottom: 1px solid #000000;
-`
+`;
 
-const Main = styled.main``
+const Main = styled.main``;
 
 const MyFooter = styled.footer`
   padding: 3rem 0;
   background-color: #dfdfdf;
   text-align: center;
   font-size: 2rem;
-`
+`;
