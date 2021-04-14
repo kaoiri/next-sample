@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function Header({ kind, image, color, children }) {
+export default function Section2({ kind, image, color, children }) {
   const style = {
     backgroundImage: `url(${image})`,
     backgroundColor: color || 'transparent'

@@ -9,6 +9,8 @@ import Columns from '../components/list/Columns';
 import Column from '../components/list/Column';
 import MainVisual from '../components/title/MainVisual';
 import Square from '../components/common/Square';
+import HK from '../components/sample/HK';
+import HK2 from '../components/sample/HK2';
 
 import { features } from '../data/features';
 
@@ -43,6 +45,13 @@ export default function Home() {
 
       <Main>
         <MainVisual></MainVisual>
+
+        <Section>
+          <Wrap>
+            <HK kind="large"></HK>
+            <HK2 size="2rem"></HK2>
+          </Wrap>
+        </Section>
 
         <Section image="/images/background.jpg">
           <Wrap>
