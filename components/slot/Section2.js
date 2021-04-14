@@ -1,8 +1,13 @@
 import styled from 'styled-components'
 
 export default function Header({ kind, image, color, children }) {
+  const style = {
+    backgroundImage: `url(${image})`,
+    backgroundColor: color || 'transparent'
+  }
+
   return (
-    <Component className={kind} image={image} color={color}>
+    <Component className={kind} style={style}>
       {children}
     </Component>
   )
@@ -10,8 +15,6 @@ export default function Header({ kind, image, color, children }) {
 
 const Component = styled.div`
   padding: 120px 0;
-  background-color: ${(props) => props.color || 'transparent'};
-  background-image: url(${(props) => props.image});
   background-size: cover;
   background-position: 50% 50%;
 

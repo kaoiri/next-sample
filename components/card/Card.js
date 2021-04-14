@@ -13,6 +13,7 @@ const Component = styled.div`
   padding: 1.5rem;
   border: 1px solid #000000;
   border-radius: 5px;
+  background-color: #ffffff;
 `
 
 const Name = styled.h3`
